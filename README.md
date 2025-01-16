@@ -1,4 +1,4 @@
-# Timer_RP2040
+# ProtoBuf
 
 Timer Module for the RP2040 platform
 
