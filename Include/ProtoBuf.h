@@ -43,7 +43,7 @@ typedef uint8 ProtoBufHandle;
 /* public interface for the individual protobuf, using function pointers?*/
 typedef struct ProtoBufBase_tag
 {
-  void (*serialize)(void * self, uint8 * buffer, uint8 * size);
+  uint8 (*serialize)(void * self, uint8 * buffer, uint8 * size);
   void (*deserialize)(void * self, uint8 * buffer, uint8 * size);
 } ProtoBufBase;
 
@@ -54,7 +54,7 @@ typedef struct ProtoBufBase_tag
 /************************************************************
    DEFAULT CLASS FUNCTIONS
 ************************************************************/
-void ProtoBuf_Default_Serialize(void * self, uint8 * buffer, uint8 * size);
+uint8 ProtoBuf_Default_Serialize(void * self, uint8 * buffer, uint8 * size);
 void ProtoBuf_Default_Deserialize(void * self, uint8 * buffer, uint8 * size);
 
 /************************************************************
